@@ -4,6 +4,9 @@ body {
 h1 {
 font-family: Bahnschrift Condensed;
 color: aliceblue;
+font-size: 52px;
+transition-duration: 0.5s;
+transition-timing-function: ease-in-out;
 }
 
 .main {
@@ -61,6 +64,11 @@ color: aliceblue;
     text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
   }
   
-  p:hover, h1:hover, a:hover {
-    background-color: rgb(255, 0, 0);
+  h1:hover {
+    font-size: 55px;
+    
   }
+
+  .subdiv {
+    font-size: 20px;
+}
