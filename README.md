@@ -1,2 +1,2 @@
 # portfolio
-bvikstedt.github.io
+url: https://github.com/bvikstedt/portfolio
