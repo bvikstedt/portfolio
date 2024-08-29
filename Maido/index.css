@@ -1,0 +1,146 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 10px;
+  background: rgb(31, 31, 31);
+  color: #5b9f46;
+  border: 2px solid black;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+body {
+  background-color: rgb(33, 36, 53);
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  float: right;
+  color: #fff;
+  background-color: #5b9f46;
+  border: none;
+}
+
+h1 {
+  padding: 20px;
+  color: antiquewhite;
+}
+
+nav {
+  color: antiquewhite;
+  float: right;
+  position: sticky;
+  top: 0;
+  background-color: rgb(31, 31, 31);
+  z-index: 100;
+}
+
+/* unvisited link */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.square-collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.subflex {
+  flex: 0 1 calc(25% - 20px); /* Neljä kuvaa rinnakkain, jätä tilaa väliin */
+  margin: 10px;
+  overflow: hidden;
+
+}
+
+.dogi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover effect */
+.subflex:hover .dogi {
+  transform: scale(1.1);
+
+}
+/* Autowriter styles */
+.autowriter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; /* Adjusted to fit in page */
+  background: rgb(33, 36, 53);
+}
+ 
+.autowriter h2 {
+  font-size: 30px;
+  font-family: "Source Code Pro", sans-serif;
+  position: relative;
+  color: white;
+}
+ 
+.autowriter h2::before,
+.autowriter h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+ 
+.autowriter h2::before {
+  background: rgb(33, 36, 53);
+  animation: writer 3s steps(45) 0.5s forwards; /* 3 seconds for "Juo maitoa" */
+}
+ 
+.autowriter h2::after {
+  width: 0.110em;
+  background: rgb(255, 255, 255);
+  animation: writer 3s steps(45) 0.5s forwards,
+     blink 1s infinite;
+}
+ 
+@keyframes writer {
+  to { left: 100%; }
+}
+ 
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
