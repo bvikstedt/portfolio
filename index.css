@@ -1,6 +1,10 @@
+
+
 body {
+  background-color: #222;
+  font-family: 'Lato', sans-serif;
   background-color: rgb(24, 24, 42);
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,12 +32,14 @@ p {
 }
 
 a {
+  color: #00e676;
   color: #61dafb;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
+  color: #00c853;
   color: #21a1f1;
 }
 
@@ -41,6 +47,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
   margin-bottom: 20px;
 }
 
@@ -64,6 +71,7 @@ a:hover {
   position: relative;
   display: inline-block;
   font-size: 40px;
+  color: #00e676;
   color: #fff;
   text-transform: uppercase;
   animation: flip 2s infinite;
@@ -72,36 +80,39 @@ a:hover {
 
 @keyframes flip {
   0%, 80% {
-    transform: rotateY(360deg);
+      transform: rotateY(360deg);
   }
 }
 
 .projects {
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
+  width: 80%;
+  max-width: 800px;
   text-align: center;
 }
 
 .projectssubsub {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .project-card {
+  background-color: #333;
+  border-radius: 10px;
   background-color: #030515;
   border: 1px solid #181884;
   border-radius: 8px;
   padding: 20px;
-  width: 300px;
+  width: calc(33.33% - 20px);
   margin: 10px;
+  width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .project-card:hover {
@@ -109,48 +120,28 @@ a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-/* Erikoisasetukset viimeiselle projektille (Black Aectori) */
-.project-card:last-child {
-  width: 400px; /* isompi kortti */
-  justify-self: center; /* keskitetty */
-}
-
 .headerp {
+  font-size: 24px;
   font-size: 18px;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .infop {
+  font-size: 18px;
+  margin-bottom: 20px;
   font-size: 16px;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 @media (max-width: 768px) {
   .project-card {
-    width: 45%; /* kaksi per rivi tabletilla */
-  }
-
-  .project-card:last-child {
-    width: 90%; /* viimeinen iso kortti mobiililla */
+    width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .project-card {
-    width: 100%; /* yksi per rivi mobiilissa */
-  }
-
-  .project-card:last-child {
-    width: 100%; /* viimeinen kortti täysleveys mobiilissa */
+    width: 100%;
   }
 }
 
@@ -158,3 +149,4 @@ img {
   width: 100%;
   height: auto;
 }
+
